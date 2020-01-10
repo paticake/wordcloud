@@ -41,12 +41,13 @@ comment_words = comment_words.replace()
 image_colors = ImageColorGenerator(img)
 # generate the WordCloud object
 
-wc = WordCloud(width=1920, height=1080,
+wc = WordCloud(width=2000, height=1000,
  collocations=False, random_state=1,
  background_color='white', stopwords=[]).generate(comment_words)
 
 # plot the wordcloud object and save as png or svg
 plt.figure()
+plt.figure( figsize=(20,10) )
 plt.imshow(wc, interpolation="bilinear")
 plt.axis("off")
 plt.tight_layout(pad=0)
